@@ -1,0 +1,25 @@
+name: Packaged Development Edition
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Set up Python 3.9
+        run: |
+            pip install -r requirements.txt
+      
+      - name: Run build script
+        run: |
+          python build.py
+          
+      - name: Archive Main build
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist.zip
+          path: dist/
