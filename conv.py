@@ -25,7 +25,7 @@ def srgf(old_file, output):
 
 
 def uigf23(old_file, output):
-    prefix = int(old_file["info"]["uid"][0])
+    prefix = int(old_file["info"]["uid"][-9])
     if 1 <= prefix and prefix <= 5 or prefix == 8 or prefix == 9:
         timezone = 8
     elif prefix == 6:
@@ -54,7 +54,7 @@ def uigf22(old_file, output):
         'ru-ru':'ru'
     }
     
-    prefix = int(old_file["info"]["uid"][0])
+    prefix = int(old_file["info"]["uid"][-9])
     if 1 <= prefix and prefix <= 5 or prefix == 8 or prefix == 9:
         timezone = 8
     elif prefix == 6:
