@@ -24,8 +24,8 @@ def main():
 
     output["info"] = {
         "export_timestamp": int(time.time()),
-        "export_app": "UIGF-Upgrader-MoYan-Test",
-        "export_app_version": "TEST",
+        "export_app": "UIGF-Upgrader-MoYan",
+        "export_app_version": "1.0.1",
         "version": "v4.0",
     }
 
